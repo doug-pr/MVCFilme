@@ -17,9 +17,12 @@ namespace MVCFilme.Controllers
             return View();
         }
 
-        public string BemVindo(string nome, int numVezes = 1)
+        public IActionResult BemVindo(string nome, int numVezes)
         {
-            return HtmlEncoder.Default.Encode($"Ola {nome}, o numero de vezes e igual a: {numVezes}.");
+            ViewData["Mensagem"] = "Olá, " + nome;
+            ViewData["Numvezes"] = numVezes;
+
+            return View();
         }
     }
 }
