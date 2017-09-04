@@ -8,9 +8,10 @@ using MVCFilme.Models;
 namespace MVCFilme.Migrations
 {
     [DbContext(typeof(MVCFilmeContext))]
-    partial class MVCFilmeContextModelSnapshot : ModelSnapshot
+    [Migration("20170904021059_Classificacao")]
+    partial class Classificacao
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.2")
